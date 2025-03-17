@@ -25,4 +25,4 @@ class PlacesController < ApplicationController
       redirect_to "/places"
     end
   end
-#system didn't want to "end"-- caused error. So removed final "end" here
+#system didn't want to have final "end" here-- caused error. Not sure why.
