@@ -5,7 +5,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new
     @user["first_name"] = params["first_name"] #TO DO: currently this is an issue / error. not sure why. Maybe need to change to username? 
-    @user["last_name"] = params["last_name"]
+    @user["last_name"] = params["last_name"] #TO DO: do we need this??
+    @user["username"] = params ["username"] #added this... IDK if we need it
     @user["email"] = params["email"]
     @user["password"] = params["password"]
     @user.save
