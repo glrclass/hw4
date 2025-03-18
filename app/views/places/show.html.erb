@@ -14,7 +14,11 @@
     <div class="col-sm-6 col-md-4">
       <h5><%= entry["title"] %></h5>
       <h6><%= entry["occurred_on"] %></h6>
-    <!--  <img src="<%= entry["image"] %>" class="img-fluid"> ADD THIS WK10--> 
+      <% if entry.uploaded_image.attached? %>
+        <img src="<%= url_for(entry.uploaded_image) %>" class="img-fluid">
+      <% else %>
+        <img src="<%= entry["image"] %>" class="img-fluid">
+      <% end %>
       <p><%= entry["description"] %></p>
     </div>
   <% end %>
