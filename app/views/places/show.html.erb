@@ -9,11 +9,16 @@
   <a href="/places">Back to All Places</a>
 </p>
 
-<% for entry in @entries %>
-  <h5><%= entry["title"] %></h5>
-  <h6><%= entry["occurred_on"] %></h6>
-  <p><%= entry["description"] %></p>
-<% end %>
+<div class="row">
+  <% for entry in @entries %>
+    <div class="col-sm-6 col-md-4">
+      <h5><%= entry["title"] %></h5>
+      <h6><%= entry["occurred_on"] %></h6>
+    <!--  <img src="<%= entry["image"] %>" class="img-fluid"> ADD THIS WK10--> 
+      <p><%= entry["description"] %></p>
+    </div>
+  <% end %>
+</div>
 
 
 
